@@ -1,0 +1,30 @@
+server:
+  port: 9090
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone:
+        http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.24.XX.XX:3306/portaldb?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: user
+    password: "password"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+feign:
+  hystrix:
+    enabled: true
+
+

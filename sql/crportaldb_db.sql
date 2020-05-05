@@ -1,0 +1,9 @@
+mysql -u root -p
+USE `mysql`
+
+-- 1.建資料庫 - portaldb
+CREATE DATABASE `portaldb` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+
+-- 2.權限
+--DROP USER 'portalap'@'%'
+GRANT ALL PRIVILEGES ON `portaldb`.* TO 'portalap'@'%' IDENTIFIED BY '!pwd.168!' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
