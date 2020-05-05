@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "e9a1a6a6-07b8-4368-8df6-b8155caa56fe",
+		"name": "newPortalApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "grace",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/user/login?username=grace&password=12345678",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/user/login?username=grace&password=12345678",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "grace"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/foo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODg2NTE5NjgsInVzZXJfbmFtZSI6ImdyYWNlIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJqdGkiOiJWUzhoWDZsQzg4MFVwcG8weFVLaElNc0EvQm89IiwiY2xpZW50X2lkIjoidXNlci1zZXJ2aWNlIiwic2NvcGUiOlsic2VydmljZSJdfQ.eGd0xT-jzakMgeZUqLACc6PCu82g4JbEyxweBHOgp4EFYCGIQAWpZgitGvy4XTuLjlwaHzhcgwN91mt8NoaSPfDaXfCn5UNiYj2Bt8OPfMPAd9ARR0-VaP0exZ2I_620BRQnnUXSVkmjZ-2MqV5B-Vh9xyPI3r3PKN704oeBGp5LHR3aVrmZIpqdw1x_q3fkqL9J-8_xsNzJP3m6c9XU41CKY0a0n076e3fftWyRNwpWaVzY8gjiEzwInEQMb23Jg3zBeQYDrZaOe3Xnl7km7x0BhMKdD4i9XSGP9FjwJTorFzerZNyGiWDZ-_xgAD04C_5jXPRHFDO6KV6joOFb7Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/foo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"foo"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
